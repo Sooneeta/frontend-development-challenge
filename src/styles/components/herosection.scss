@@ -13,11 +13,13 @@
 
 .hero-section-wrapper {
     @include flex(row, center, space-between, null);
-    background-color: $span-color;
+    background-color: $dark-blue-gray-color;
     padding: 0 5.125em 0 6.8125em;
+
     div {
         width: 41.5972vw;
         @include flex(column, null, null, 1.5em);
+
         h1 {
             font-weight: $font-weight-bold;
             font-size: 4.375rem;
@@ -28,7 +30,6 @@
         p {
             font-weight: $font-weight-regular;
             font-size: 1.125rem;
-            line-height: $line-height-medium;
             margin: 0;
             color: white;
         }
@@ -36,10 +37,12 @@
         button {
             @include button(#4532fc, null, 0.53125em 1.125em);
         }
+
         .circle-container {
             width: fit-content;
             @include horizontal-layout;
             gap: 5px;
+
             .circle {
                 width: 0.875em;
                 height: 0.875em;

@@ -1,96 +1,54 @@
+@use "../base/mixins" as *;
+@use "../base/variables" as *;
+
 .contact-form-container {
-    padding: 100px 72px 0px 72px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
-    padding: 120px 223px;
+    @include flex(column, center, center, 1.5em);
+    padding: 7.5em 13.9375em;
 
     .heading-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 24px;
+        @include flex(column, center, null, 1.5em);
 
         h1 {
             margin: 0;
-
-            font-weight: 800;
-            font-size: 70px;
-            line-height: 64px;
-            color: #4532fc;
+            font-weight: $font-weight-bold;
+            font-size: 4.375rem;
+            // line-height: 64px;
+            color: $primary-color;
         }
 
         p {
             margin: 0;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 32px;
+            font-weight: $font-weight-regular;
+            font-size: 1.125rem;
+            // line-height: 32px;
             color: #616161;
         }
     }
 
     form {
-        padding: 60px;
-        width: 849px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 16px;
+        padding: 3.75em;
+        width: 58.9583vw;
+        @include flex(column, center, center, 1em);
 
         .form-field {
             width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5em;
-            input {
-                width: 98%;
-                border: 1px solid #9e9e9e;
-                border-radius: 16px;
-                padding: 20px 8px;
-                font-family: "Poppins";
+            @include flex(column, null, null, 0.5em);
 
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 20px;
-                color: #9e9e9e;
+            input {
+                @include input(1.25em 0.5em);
             }
 
             textarea {
-                width: 98%;
-                font-family: "Poppins";
-                border-radius: 16px;
-                border: 1px solid #9e9e9e;
-                font-weight: 500;
-                padding: 79.5px 8px;
-                font-size: 16px;
-                line-height: 20px;
-                color: #9e9e9e;
+                @include input(4.96875em 0.5em);
             }
 
             .error {
-                display: flex;
-                align-items: center;
-                gap: 0.5em;
-                padding-left: 0.5em;
-                font-size: 0.9rem;
-                color: red;
-                margin: 0;
+                @include error;
             }
         }
+
         button {
-            width: fit-content;
-            padding: 13.5px 72px;
-            border-radius: 16px;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 23px;
-            color: white;
-            background-color: #4532fc;
-            border: none;
-            cursor: pointer;
+            @include button(white, $primary-color, 0.84375em 4.5em);
         }
     }
 }

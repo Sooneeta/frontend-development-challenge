@@ -1,90 +1,72 @@
+@use "../base/mixins" as *;
+@use "../base/variables" as *;
+
 .task-manager-container {
-    padding: 0px 72px;
+    padding: 0px 4.5em;
 
     .wrapper {
         background-color: #f1f0ff;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 24px;
-        padding: 120px 223px;
+        @include flex(column, center, center, 1.5em);
+        padding: 7.5em 13.9375em;
 
         .heading-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 24px;
+            @include flex(column, center, null, 1.5em);
 
             h1 {
                 margin: 0;
-
-                font-weight: 800;
-                font-size: 70px;
-                line-height: 64px;
-                color: #4532fc;
+                font-weight: $font-weight-bold;
+                font-size: 4.375rem;
+                color: $primary-color;
             }
 
             p {
                 margin: 0;
-                font-weight: 400;
-                font-size: 18px;
-                line-height: 32px;
+                font-weight: $font-weight-regular;
+                font-size: 1.125rem;
                 color: #616161;
             }
         }
 
         .task-section {
-            padding: 60px;
+            padding: 3.75em;
             background-color: white;
-            border-radius: 32px;
-            width: 849px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 16px;
+            border-radius: 2em;
+            width: 58.9583vw;
+            @include flex(column, center, center, 1em);
 
             .task-item {
                 width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
+                @include flex(row, center, space-between, null);
 
                 div {
-                    display: flex;
-                    align-items: center;
-                    gap: 10px;
+                    @include flex(row, center, null, 0.625em);
 
                     input {
-                        width: 25.5px;
-                        height: 25px;
+                        width: 1.59375em;
+                        height: 1.5625em;
                     }
 
                     p {
                         color: #3c434a;
-                        font-weight: 400;
-                        font-size: 16px;
-                        line-height: 24px;
+                        font-weight: $font-weight-regular;
+                        font-size: 1rem;
                         letter-spacing: 0%;
                         vertical-align: middle;
                     }
                 }
 
                 button {
-                    display: flex;
-                    gap: 10px;
-                    align-items: center;
+                    @include flex(row, center, null, 0.625em);
                     border: 1px solid #fc4b4b;
-                    border-radius: 4px;
-                    padding: 4px 16px;
+                    border-radius: 0.25em;
+                    padding: 0.25em 1em;
                     background: none;
 
                     span {
                         font-family: Manrope;
                         color: #fc4b4b;
-                        font-weight: 600;
-                        font-size: 14px;
+                        font-weight: $font-weight-semibold;
+                        font-size: 0.875rem;
                         line-height: 100%;
                         letter-spacing: 0%;
                     }
@@ -93,44 +75,21 @@
 
             .input-field {
                 width: 100%;
-                display: flex;
-                flex-direction: column;
-                gap: 0.5em;
-                input {
-                    width: 98%;
-                    font-family: "Poppins";
-                    border: 1px solid #9e9e9e;
-                    border-radius: 16px;
-                    padding: 20px 8px;
+                @include flex(column, null, null, 0.5em);
 
-                    font-weight: 500;
-                    font-size: 16px;
-                    line-height: 20px;
-                    color: #9e9e9e;
+                input {
+                    @include input(1.25em 0.5em);
                 }
 
                 .error {
-                    display: flex;
-                    align-items: center;
-                    gap: 0.5em;
-                    padding-left: 0.5em;
-                    font-size: 0.9rem;
-                    color: red;
-                    margin: 0;
+                    @include error;
                 }
             }
 
             .add-btn {
-                width: fit-content;
                 align-self: flex-start;
-                padding: 10px 64px;
-                border-radius: 16px;
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 23px;
-                color: white;
-                background-color: #4532fc;
-                border: none;
+                @include button(white, $primary-color, 0.625em 4em);
+
             }
         }
     }

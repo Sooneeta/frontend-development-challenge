@@ -1,28 +1,23 @@
+@use "../base/mixins" as *;
+@use "../base/variables" as *;
+
 .outsource-payment {
-    padding: 120px 80px 60px 80px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 46px;
+    @include flex(column, center, null, 2.875em);
+    padding: 7.5em 5em 3.75em 5em;
 
     .heading {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
+        @include flex(column, center, null, 1em);
 
         h2 {
-            color: #121d2d;
-            font-weight: 600;
-            font-size: 48px;
-            line-height: 56px;
+            color: $dark-blue-gray-color;
+            font-weight: $font-weight-semibold;
+            font-size: 3rem;
             margin: 0;
         }
 
         p {
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 24px;
+            font-weight: $font-weight-regular;
+            font-size: 1rem;
             color: #616161;
         }
     }
@@ -30,28 +25,23 @@
     .payment-collection-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        row-gap: 20px;
-        column-gap: 10px;
+        row-gap: 1.25em;
+        column-gap: 0.625em;
 
         .payment-collection-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 52px 24px;
-            gap: 28px;
+            @include flex(column, center, null, 1.75em);
+            padding: 3.25em 1.5em;
 
             h5 {
-                font-weight: 500;
-                font-size: 24px;
-                line-height: 32px;
-                color: #121d2d;
+                font-weight: $font-weight-medium;
+                font-size: 1.5rem;
+                color: $dark-blue-gray-color;
                 margin: 0;
             }
 
             p {
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 24px;
+                font-weight: $font-weight-regular;
+                font-size: 1rem;
                 text-align: center;
                 color: #616161;
             }
