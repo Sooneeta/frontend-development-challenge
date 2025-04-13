@@ -4,10 +4,27 @@
 header {
     @include flex(row, center, space-between);
     padding: 1.4375em 5.125em 2em 5.125em;
+
+    @include respond-to(lg) {
+        padding: 1.5em;
+    }
+
+
 }
+
+.logo-section {
+    @include respond-to(lg) {
+        img {
+            width: 90%;
+        }
+    }
+
+}
+
 
 .navlink {
     @include flex(row, center, null, 2em);
+
 
     span {
         font-weight: $font-weight-medium;
@@ -15,7 +32,17 @@ header {
         line-height: $line-height-tight;
         color: $dark-blue-gray-color;
     }
+
+
+    @include respond-to(lg) {
+        gap: 1em;
+
+    }
+
+
 }
+
+
 
 .login-section {
     @include flex(row, center, null, 0.875em);
@@ -30,11 +57,15 @@ header {
     button {
         @include button(white, $primary-color, 0.53125em 1.125em);
     }
+
+
 }
 
 footer {
     padding: 0px 11.6875em;
     background-color: #f1f0ff;
+
+
 
     .top-section {
         padding: 72px 0 25px 0;
@@ -87,6 +118,7 @@ footer {
         @include flex(row, null, space-between, null);
         padding: 1.5625em 0;
 
+
         div {
             @include flex(row, center, null, 1.5em);
 
@@ -95,6 +127,35 @@ footer {
                 font-size: 0.75rem;
                 color: $dark-blue-gray-color;
                 opacity: 50%;
+            }
+        }
+    }
+
+    @include respond-to(lg) {
+        padding: 0 5em;
+    }
+
+    @include respond-to(md) {
+        padding: 0 3.5em;
+    }
+
+    @include respond-to(sm) {
+        padding: 0 2.5em;
+    }
+
+    @include respond-to(xs) {
+        padding: 0 1.5em;
+
+        .top-section {
+            padding: 50px 0 10px 0;
+            @include flex(column, null, null, 1.5em);
+
+            .about-us {
+                @include flex(row, center, space-between, null);
+
+                p {
+                    width: 70%;
+                }
             }
         }
     }
