@@ -62,7 +62,7 @@
 
     @include respond-to(sm) {
         @include flex(column, center, null, 2em);
-        padding: 5m 3em 2em 3em;
+        padding: 4em 2em 2em 2em;
 
         .payment-collection-container {
             grid-template-columns: repeat(2, 1fr);
