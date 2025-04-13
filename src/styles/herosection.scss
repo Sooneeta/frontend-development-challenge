@@ -1,0 +1,78 @@
+@mixin horizontal-layout {
+    display: flex;
+    align-items: center;
+}
+
+@mixin vertical-layout {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-section-wrapper{
+    @include horizontal-layout;
+    justify-content: space-between;
+    background-color: #121D2D;
+    padding: 0px 82px 0px 109px;
+
+    div {
+        width: 599px;
+        @include vertical-layout;
+        gap: 24px;
+
+
+        h1 {    
+font-weight: 800;
+font-size: 70px;
+line-height: 64px;
+color: white;
+margin: 0;
+
+        }
+
+        p {
+font-weight: 400;
+font-size: 18px;
+line-height: 32px;
+margin: 0;
+color: white;
+
+        }
+
+        button {
+ width: fit-content;
+font-weight: 500;
+font-size: 16px;
+line-height: 23px;
+letter-spacing: 0px;
+color: #4532FC;
+padding: 8.5px 18px;
+border-radius: 16px;
+
+        }
+        .circle-container {
+            width: fit-content;
+            @include horizontal-layout;
+            gap: 5px;
+            .circle {
+                width: 14px;
+                height: 14px;
+                border-radius: 50%;
+                background-color: #D9D9D980;        
+            }
+
+            .circle-active {
+                @extend .circle;
+                background-color: #DF49FC;
+            }
+        }
+
+
+
+        
+    }
+
+    figure {
+        margin: 0;
+    }
+}
+

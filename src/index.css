@@ -1,0 +1,9 @@
+@import "@fontsource/roboto";
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Roboto";
+  margin: 0;
+  box-sizing: border-box;
+}
