@@ -2,7 +2,7 @@ import React from "react";
 import HeroSection from "../components/HeroSection";
 import { paymentCollections } from "../constants/constants";
 import EarthIcon from "../assets/Earth.svg";
-import "../styles/homepage.scss";
+import "../styles/components/homepage.scss";
 import TaskManager from "../components/TaskManager";
 import ContactForm from "../components/ContactForm";
 

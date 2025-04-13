@@ -1,7 +1,7 @@
 import React from "react";
 import { navLinks } from "../constants/constants";
 import Logo from "../assets/logo.svg";
-import "../styles/mainlayout.scss";
+import "../styles/components/mainlayout.scss";
 
 const Header = () => {
   return (

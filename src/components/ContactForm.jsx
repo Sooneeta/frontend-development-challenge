@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/contactform.scss";
+import "../styles/components/contactform.scss";
 import * as z from "zod";
 import { isValidPhoneNumber } from "libphonenumber-js";
 import { zodResolver } from "@hookform/resolvers/zod";

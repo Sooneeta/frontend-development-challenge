@@ -1,13 +1,11 @@
-
-
-.contact-form-container{
+.contact-form-container {
     padding: 100px 72px 0px 72px;
     display: flex;
     flex-direction: column;
     align-items: center;
-        justify-content: center;
-        gap: 24px;
-        padding: 120px 223px;
+    justify-content: center;
+    gap: 24px;
+    padding: 120px 223px;
 
     .heading-section {
         display: flex;
@@ -17,21 +15,19 @@
 
         h1 {
             margin: 0;
-         
-font-weight: 800;
-font-size: 70px;
-line-height: 64px;
-color: #4532FC;
 
+            font-weight: 800;
+            font-size: 70px;
+            line-height: 64px;
+            color: #4532fc;
         }
 
         p {
             margin: 0;
-font-weight: 400;
-font-size: 18px;
-line-height: 32px;
-color: #616161;
-
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 32px;
+            color: #616161;
         }
     }
 
@@ -51,28 +47,27 @@ color: #616161;
             gap: 0.5em;
             input {
                 width: 98%;
-                border : 1px solid #9E9E9E;
+                border: 1px solid #9e9e9e;
                 border-radius: 16px;
                 padding: 20px 8px;
                 font-family: "Poppins";
-          
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    color: #9E9E9E;
-    
+
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 20px;
+                color: #9e9e9e;
             }
 
             textarea {
                 width: 98%;
                 font-family: "Poppins";
                 border-radius: 16px;
-                border : 1px solid #9E9E9E;
+                border: 1px solid #9e9e9e;
                 font-weight: 500;
                 padding: 79.5px 8px;
-    font-size: 16px;
-    line-height: 20px;
-    color: #9E9E9E;
+                font-size: 16px;
+                line-height: 20px;
+                color: #9e9e9e;
             }
 
             .error {
@@ -84,26 +79,18 @@ color: #616161;
                 color: red;
                 margin: 0;
             }
-
-
-          
         }
         button {
             width: fit-content;
             padding: 13.5px 72px;
-            border-radius: 16px;               
-font-weight: 500;
-font-size: 16px;
-line-height: 23px;
-color: white;
-background-color: #4532FC;
-border: none;
-cursor: pointer;
+            border-radius: 16px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 23px;
+            color: white;
+            background-color: #4532fc;
+            border: none;
+            cursor: pointer;
         }
-      
-
-       
-
-       
     }
 }

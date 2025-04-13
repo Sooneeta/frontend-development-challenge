@@ -1,9 +1,8 @@
 .task-manager-container {
     padding: 0px 72px;
 
-    
     .wrapper {
-        background-color:  #F1F0FF;
+        background-color: #f1f0ff;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -19,21 +18,19 @@
 
             h1 {
                 margin: 0;
-             
-font-weight: 800;
-font-size: 70px;
-line-height: 64px;
-color: #4532FC;
 
+                font-weight: 800;
+                font-size: 70px;
+                line-height: 64px;
+                color: #4532fc;
             }
 
             p {
                 margin: 0;
-font-weight: 400;
-font-size: 18px;
-line-height: 32px;
-color: #616161;
-
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 32px;
+                color: #616161;
             }
         }
 
@@ -65,13 +62,12 @@ color: #616161;
                     }
 
                     p {
-                      color: #3C434A;
-font-weight: 400;
-font-size: 16px;
-line-height: 24px;
-letter-spacing: 0%;
-vertical-align: middle;
-
+                        color: #3c434a;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 24px;
+                        letter-spacing: 0%;
+                        vertical-align: middle;
                     }
                 }
 
@@ -79,22 +75,20 @@ vertical-align: middle;
                     display: flex;
                     gap: 10px;
                     align-items: center;
-                    border: 1px solid #FC4B4B;
+                    border: 1px solid #fc4b4b;
                     border-radius: 4px;
                     padding: 4px 16px;
                     background: none;
 
                     span {
                         font-family: Manrope;
-                        color: #FC4B4B;
-font-weight: 600;
-font-size: 14px;
-line-height: 100%;
-letter-spacing: 0%;
-
+                        color: #fc4b4b;
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 100%;
+                        letter-spacing: 0%;
                     }
                 }
-
             }
 
             .input-field {
@@ -105,16 +99,14 @@ letter-spacing: 0%;
                 input {
                     width: 98%;
                     font-family: "Poppins";
-                    border : 1px solid #9E9E9E;
+                    border: 1px solid #9e9e9e;
                     border-radius: 16px;
                     padding: 20px 8px;
-                    
-                  
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    color: #9E9E9E;
-    
+
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: #9e9e9e;
                 }
 
                 .error {
@@ -125,26 +117,21 @@ letter-spacing: 0%;
                     font-size: 0.9rem;
                     color: red;
                     margin: 0;
-    
-                    
                 }
             }
-
-          
 
             .add-btn {
                 width: fit-content;
                 align-self: flex-start;
                 padding: 10px 64px;
-                border-radius: 16px;               
-font-weight: 500;
-font-size: 16px;
-line-height: 23px;
-color: white;
-background-color: #4532FC;
-border: none;
+                border-radius: 16px;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 23px;
+                color: white;
+                background-color: #4532fc;
+                border: none;
             }
         }
     }
-    
 }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/taskmanager.scss";
+import "../styles/components/taskmanager.scss";
 import { useTask } from "../context/TaskContext";
 import { X } from "lucide-react";
 import { TriangleAlert } from "lucide-react";

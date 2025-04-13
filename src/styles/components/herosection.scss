@@ -1,0 +1,60 @@
+@use "../base/mixins" as *;
+@use "../base/variables" as *;
+
+@mixin horizontal-layout {
+    display: flex;
+    align-items: center;
+}
+
+@mixin vertical-layout {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-section-wrapper {
+    @include flex(row, center, space-between, null);
+    background-color: $span-color;
+    padding: 0 5.125em 0 6.8125em;
+    div {
+        width: 41.5972vw;
+        @include flex(column, null, null, 1.5em);
+        h1 {
+            font-weight: $font-weight-bold;
+            font-size: 4.375rem;
+            color: white;
+            margin: 0;
+        }
+
+        p {
+            font-weight: $font-weight-regular;
+            font-size: 1.125rem;
+            line-height: $line-height-medium;
+            margin: 0;
+            color: white;
+        }
+
+        button {
+            @include button(#4532fc, null, 0.53125em 1.125em);
+        }
+        .circle-container {
+            width: fit-content;
+            @include horizontal-layout;
+            gap: 5px;
+            .circle {
+                width: 0.875em;
+                height: 0.875em;
+                border-radius: 50%;
+                background-color: #d9d9d980;
+            }
+
+            .circle-active {
+                @extend .circle;
+                background-color: #df49fc;
+            }
+        }
+    }
+
+    figure {
+        margin: 0;
+    }
+}

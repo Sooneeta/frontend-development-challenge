@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import "../styles/mainlayout.scss";
+import "../styles/components/mainlayout.scss";
 import { Toaster } from "sonner";
 
 const MainLayout = ({ children }) => {

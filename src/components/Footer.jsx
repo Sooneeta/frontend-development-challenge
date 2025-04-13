@@ -2,7 +2,7 @@ import React from "react";
 import EmailIcon from "../assets/email.svg";
 import LinkedinIcon from "../assets/linkedin.svg";
 import { quickLinks } from "../constants/constants";
-import "../styles/mainlayout.scss";
+import "../styles/components/mainlayout.scss";
 
 const Footer = () => {
   return (
