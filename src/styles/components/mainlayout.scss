@@ -198,6 +198,22 @@ footer {
     }
 }
 
+@include respond-to(lg) {
+    header {
+        padding: 1.4375em 2.5em 2em 2.5em;
+
+        .navlink {
+            span {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    footer {
+        padding: 0 2.5em;
+    }
+}
+
 @include respond-to(md) {
     .navlink {
         display: none;
@@ -208,7 +224,7 @@ footer {
     }
 }
 
-@include respond-to(xs) {
+@include respond-to(sm) {
     header {
         padding: 1.4375em 1em 2em 1em;
     }
@@ -223,6 +239,22 @@ footer {
             .about-us {
                 @include flex(row, center, space-between, null);
 
+                p {
+                    width: 100%;
+                }
+            }
+
+            .quick-link {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@include respond-to(xs) {
+    footer {
+        .top-section {
+            .about-us {
                 p {
                     width: 65vw;
                 }

@@ -96,22 +96,36 @@
     }
 }
 
-@include respond-to(xs) {
+@include respond-to(sm) {
     .task-manager-container {
-        padding: 0 0em;
+        padding: 0 1.5em;
 
         .wrapper {
             padding: 5em 0em;
 
             .heading-section {
                 h1 {
-                    font-size: 2.5rem;
+                    font-size: 3rem;
                 }
             }
 
             .task-section {
                 padding: 3.75em 1em;
                 width: 80vw;
+            }
+        }
+    }
+}
+
+@include respond-to(xs) {
+    .task-manager-container {
+        padding: 0 0em;
+
+        .wrapper {
+            .heading-section {
+                h1 {
+                    font-size: 2.5rem;
+                }
             }
         }
     }

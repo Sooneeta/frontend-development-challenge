@@ -54,10 +54,24 @@
     }
 }
 
-@include respond-to(xs) {
+@include respond-to(sm) {
     .outsource-payment {
         padding: 7.5em 2em 3.75em 2em;
 
+        .heading {
+            h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        .payment-collection-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@include respond-to(xs) {
+    .outsource-payment {
         .heading {
             h2 {
                 font-size: 2rem;

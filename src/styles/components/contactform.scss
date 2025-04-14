@@ -53,19 +53,29 @@
     }
 }
 
-@include respond-to(xs) {
+@include respond-to(sm) {
     .contact-form-container {
         padding: 5em 1.5em;
 
         .heading-section {
             h1 {
-                font-size: 2.5rem;
+                font-size: 3rem;
             }
         }
 
         form {
             padding: 3.75em 1em;
             width: 80vw;
+        }
+    }
+}
+
+@include respond-to(xs) {
+    .contact-form-container {
+        .heading-section {
+            h1 {
+                font-size: 2.5rem;
+            }
         }
     }
 }
