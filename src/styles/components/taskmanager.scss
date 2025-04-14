@@ -9,10 +9,8 @@
         @include flex(column, center, center, 1.5em);
         padding: 7.5em 13.9375em;
 
-
         .heading-section {
             @include flex(column, center, null, 1.5em);
-
 
             h1 {
                 margin: 0;
@@ -94,26 +92,27 @@
             .add-btn {
                 align-self: flex-start;
                 @include button(white, $primary-color, 0.625em 4em);
-
             }
         }
     }
+}
 
-    @include respond-to(xs) {
-        padding: 0 1em;
+@include respond-to(xs) {
+    .task-manager-container {
+        padding: 0 1.5em;
 
         .wrapper {
-            padding: 5em 0.5em;
+            padding: 5em 0em;
 
             .heading-section {
                 h1 {
-                    font-size: 3rem;
+                    font-size: 2.5rem;
                 }
             }
 
             .task-section {
-                padding: 2em 1em;
-                width: 90%;
+                padding: 3.75em 1em;
+                width: 80vw;
             }
         }
     }

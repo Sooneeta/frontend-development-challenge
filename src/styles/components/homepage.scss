@@ -52,28 +52,17 @@
             }
         }
     }
+}
 
-    @include respond-to(xl) {
-        padding: 7.5em 4em 3.75em 4em;
-    }
+@include respond-to(xs) {
+    .outsource-payment {
+        padding: 7.5em 2em 3.75em 2em;
 
-    @include respond-to(lg) {
-        .payment-collection-container {
-            column-gap: 0.5em;
+        .heading {
+            h2 {
+                font-size: 2rem;
+            }
         }
-    }
-
-    @include respond-to(sm) {
-        @include flex(column, center, null, 2em);
-        padding: 4em 2em 2em 2em;
-
-        .payment-collection-container {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-
-    @include respond-to(xs) {
-        padding: 4m 2em 1em 2em;
 
         .payment-collection-container {
             grid-template-columns: repeat(1, 1fr);

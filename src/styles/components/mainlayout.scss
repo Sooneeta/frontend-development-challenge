@@ -4,28 +4,6 @@
 header {
     @include flex(row, center, space-between);
     padding: 1.4375em 5.125em 2em 5.125em;
-
-    @include respond-to(lg) {
-        padding: 1.5em;
-    }
-
-    @include respond-to(xl) {
-        padding: 1.5em 3em;
-    }
-
-    @include respond-to(md) {
-        .navlink {
-            display: none;
-        }
-    }
-}
-
-.logo-section {
-    @include respond-to(lg) {
-        img {
-            width: 90%;
-        }
-    }
 }
 
 .navlink {
@@ -36,10 +14,6 @@ header {
         font-size: 1.125rem;
         line-height: $line-height-tight;
         color: $dark-blue-gray-color;
-    }
-
-    @include respond-to(lg) {
-        gap: 1em;
     }
 }
 
@@ -55,10 +29,6 @@ header {
 
     button {
         @include button(white, $primary-color, 0.53125em 1.125em);
-    }
-
-    @include respond-to(md) {
-        display: none;
     }
 }
 
@@ -125,39 +95,6 @@ footer {
                 font-size: 0.75rem;
                 color: $dark-blue-gray-color;
                 opacity: 50%;
-            }
-        }
-    }
-
-    @include respond-to(xl) {
-        padding: 0 6em;
-    }
-
-    @include respond-to(lg) {
-        padding: 0 5em;
-    }
-
-    @include respond-to(md) {
-        padding: 0 3.5em;
-    }
-
-    @include respond-to(sm) {
-        padding: 0 2.5em;
-    }
-
-    @include respond-to(xs) {
-        padding: 0 1.5em;
-
-        .top-section {
-            padding: 50px 0 10px 0;
-            @include flex(column, null, null, 1.5em);
-
-            .about-us {
-                @include flex(row, center, space-between, null);
-
-                p {
-                    width: 70%;
-                }
             }
         }
     }
@@ -257,6 +194,39 @@ footer {
         button {
             width: fit-content;
             @include button(white, $primary-color, 0.53125em 1.125em);
+        }
+    }
+}
+
+@include respond-to(md) {
+    .navlink {
+        display: none;
+    }
+
+    .login-section {
+        display: none;
+    }
+}
+
+@include respond-to(xs) {
+    header {
+        padding: 1.4375em 1em 2em 1em;
+    }
+
+    footer {
+        padding: 0 1em;
+
+        .top-section {
+            padding: 50px 0 10px 0;
+            @include flex(column, center, null, 2em);
+
+            .about-us {
+                @include flex(row, center, space-between, null);
+
+                p {
+                    width: 70vw;
+                }
+            }
         }
     }
 }
