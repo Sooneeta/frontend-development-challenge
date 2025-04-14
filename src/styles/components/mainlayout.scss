@@ -9,7 +9,15 @@ header {
         padding: 1.5em;
     }
 
+    @include respond-to(xl) {
+        padding: 1.5em 3em;
+    }
 
+    @include respond-to(md) {
+        .navlink {
+            display: none;
+        }
+    }
 }
 
 .logo-section {
@@ -18,13 +26,10 @@ header {
             width: 90%;
         }
     }
-
 }
-
 
 .navlink {
     @include flex(row, center, null, 2em);
-
 
     span {
         font-weight: $font-weight-medium;
@@ -33,16 +38,10 @@ header {
         color: $dark-blue-gray-color;
     }
 
-
     @include respond-to(lg) {
         gap: 1em;
-
     }
-
-
 }
-
-
 
 .login-section {
     @include flex(row, center, null, 0.875em);
@@ -58,14 +57,14 @@ header {
         @include button(white, $primary-color, 0.53125em 1.125em);
     }
 
-
+    @include respond-to(md) {
+        display: none;
+    }
 }
 
 footer {
     padding: 0px 11.6875em;
     background-color: #f1f0ff;
-
-
 
     .top-section {
         padding: 72px 0 25px 0;
@@ -118,7 +117,6 @@ footer {
         @include flex(row, null, space-between, null);
         padding: 1.5625em 0;
 
-
         div {
             @include flex(row, center, null, 1.5em);
 
@@ -129,6 +127,10 @@ footer {
                 opacity: 50%;
             }
         }
+    }
+
+    @include respond-to(xl) {
+        padding: 0 6em;
     }
 
     @include respond-to(lg) {
@@ -157,6 +159,104 @@ footer {
                     width: 70%;
                 }
             }
+        }
+    }
+}
+
+.menu-button {
+    display: none;
+
+    @include respond-to(md) {
+        display: block;
+    }
+
+    background: none;
+    border: 1px solid $primary-color;
+    border-radius: 4px;
+
+    .hamburger-menu {
+        color: $primary-color;
+        font-weight: $font-weight-bold;
+    }
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 250px;
+    height: 100vh;
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    &--open {
+        transform: translateX(0);
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #f1f0ff;
+        z-index: -1;
+    }
+
+    .sidebar-content {
+        padding: 2rem;
+        position: relative;
+    }
+
+    .sidebar-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+
+        svg {
+            color: $dark-blue-gray-color;
+        }
+    }
+
+    .sidebar-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 2rem;
+
+        span {
+            font-weight: $font-weight-medium;
+            font-size: 1.125rem;
+            line-height: $line-height-tight;
+            color: $dark-blue-gray-color;
+            cursor: pointer;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+
+    .login {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+        padding-top: 1.2em;
+
+        span {
+            font-weight: $font-weight-medium;
+            font-size: $font-size-normal;
+            color: $primary-color;
+        }
+
+        button {
+            width: fit-content;
+            @include button(white, $primary-color, 0.53125em 1.125em);
         }
     }
 }

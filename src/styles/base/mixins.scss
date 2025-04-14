@@ -1,18 +1,19 @@
 @use "../base/variables.scss" as *;
+@use "sass:map";
 
 $breakpoints: (
     xs: 480px,
     sm: 768px,
     md: 1024px,
     lg: 1280px,
+    xl: 1335px
 );
 
 @mixin respond-to($breakpoint) {
-    @media (max-width: map-get($breakpoints, $breakpoint)) {
+    @media (max-width: map.get($breakpoints, $breakpoint)) {
         @content;
     }
 }
-
 
 @mixin flex($direction: row, $align: center, $justify: null, $gap: null) {
     display: flex;
@@ -36,7 +37,7 @@ $breakpoints: (
     font-weight: $font-weight-medium;
     width: fit-content;
     font-size: $font-size-normal;
-    font-family: 'Roboto';
+    font-family: "Roboto";
     border: none;
     padding: $padding;
     cursor: pointer;
